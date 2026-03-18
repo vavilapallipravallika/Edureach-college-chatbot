@@ -34,6 +34,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/auth", authRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/api/vapi", vapiRoutes);
+app.get("/",(req,res)=>{
+  res.send("Server is running successfully");
+});
 
 // 404
 app.use((_req: Request, res: Response) => {
